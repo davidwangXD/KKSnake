@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2172573222FA26C900E39F67 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172573122FA26C900E39F67 /* GameLogic.swift */; };
+		2172573C22FA473300E39F67 /* KKSnakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172573B22FA473300E39F67 /* KKSnakeTests.swift */; };
 		21A8F8AB22FA16D30050CCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8F8AA22FA16D30050CCDF /* AppDelegate.swift */; };
 		21A8F8AF22FA16D30050CCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8F8AE22FA16D30050CCDF /* ViewController.swift */; };
 		21A8F8B422FA16D50050CCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A8F8B322FA16D50050CCDF /* Assets.xcassets */; };
@@ -15,8 +16,21 @@
 		21A8F8BF22FA1DDB0050CCDF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8F8BE22FA1DDB0050CCDF /* GameView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2172573E22FA473300E39F67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21A8F89F22FA16D30050CCDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21A8F8A622FA16D30050CCDF;
+			remoteInfo = KKSnake;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2172573122FA26C900E39F67 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		2172573922FA473300E39F67 /* KKSnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKSnakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2172573B22FA473300E39F67 /* KKSnakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSnakeTests.swift; sourceTree = "<group>"; };
+		2172573D22FA473300E39F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A8F8A722FA16D30050CCDF /* KKSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A8F8AA22FA16D30050CCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A8F8AE22FA16D30050CCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2172573622FA473300E39F67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21A8F8A422FA16D30050CCDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +58,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2172573A22FA473300E39F67 /* KKSnakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2172573B22FA473300E39F67 /* KKSnakeTests.swift */,
+				2172573D22FA473300E39F67 /* Info.plist */,
+			);
+			path = KKSnakeTests;
+			sourceTree = "<group>";
+		};
 		21A8F89E22FA16D30050CCDF = {
 			isa = PBXGroup;
 			children = (
 				21A8F8A922FA16D30050CCDF /* KKSnake */,
+				2172573A22FA473300E39F67 /* KKSnakeTests */,
 				21A8F8A822FA16D30050CCDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				21A8F8A722FA16D30050CCDF /* KKSnake.app */,
+				2172573922FA473300E39F67 /* KKSnakeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +118,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2172573822FA473300E39F67 /* KKSnakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2172574222FA473300E39F67 /* Build configuration list for PBXNativeTarget "KKSnakeTests" */;
+			buildPhases = (
+				2172573522FA473300E39F67 /* Sources */,
+				2172573622FA473300E39F67 /* Frameworks */,
+				2172573722FA473300E39F67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2172573F22FA473300E39F67 /* PBXTargetDependency */,
+			);
+			name = KKSnakeTests;
+			productName = KKSnakeTests;
+			productReference = 2172573922FA473300E39F67 /* KKSnakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		21A8F8A622FA16D30050CCDF /* KKSnake */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A8F8BB22FA16D50050CCDF /* Build configuration list for PBXNativeTarget "KKSnake" */;
@@ -113,6 +163,10 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "David Wang";
 				TargetAttributes = {
+					2172573822FA473300E39F67 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 21A8F8A622FA16D30050CCDF;
+					};
 					21A8F8A622FA16D30050CCDF = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -132,11 +186,19 @@
 			projectRoot = "";
 			targets = (
 				21A8F8A622FA16D30050CCDF /* KKSnake */,
+				2172573822FA473300E39F67 /* KKSnakeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2172573722FA473300E39F67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21A8F8A522FA16D30050CCDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +211,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2172573522FA473300E39F67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2172573C22FA473300E39F67 /* KKSnakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21A8F8A322FA16D30050CCDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +232,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2172573F22FA473300E39F67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21A8F8A622FA16D30050CCDF /* KKSnake */;
+			targetProxy = 2172573E22FA473300E39F67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		21A8F8B522FA16D50050CCDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -174,6 +252,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2172574022FA473300E39F67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9RHBTL7DB;
+				INFOPLIST_FILE = KKSnakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anniestudio.KKSnakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKSnake.app/KKSnake";
+			};
+			name = Debug;
+		};
+		2172574122FA473300E39F67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9RHBTL7DB;
+				INFOPLIST_FILE = KKSnakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anniestudio.KKSnakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKSnake.app/KKSnake";
+			};
+			name = Release;
+		};
 		21A8F8B922FA16D50050CCDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -329,6 +447,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2172574222FA473300E39F67 /* Build configuration list for PBXNativeTarget "KKSnakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2172574022FA473300E39F67 /* Debug */,
+				2172574122FA473300E39F67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21A8F8A222FA16D30050CCDF /* Build configuration list for PBXProject "KKSnake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

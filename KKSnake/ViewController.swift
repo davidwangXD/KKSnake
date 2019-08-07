@@ -11,6 +11,8 @@ import UIKit
 // MARK: - ViewController
 class ViewController: UIViewController {
     private lazy var gameView = GameView(unitSize: 10)
+    private lazy var startButton = UIButton()
+    private lazy var scoreLabel = UILabel()
     private lazy var displayLink: CADisplayLink = {
         let displayLink = CADisplayLink(target: self, selector: #selector(self.gameLoop))
         displayLink.add(to: RunLoop.current, forMode: .common)
@@ -18,15 +20,11 @@ class ViewController: UIViewController {
         displayLink.preferredFramesPerSecond = 10
         return displayLink
     }()
-    private lazy var startButton = UIButton()
-    private lazy var scoreLabel = UILabel()
     private var gameLogic: GameLogic?
-    
     
     init() {
         super.init(nibName: nil, bundle: nil)
         initUI()
-        gameView.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -102,6 +100,7 @@ extension ViewController {
     private func initGameView() {
         gameView.translatesAutoresizingMaskIntoConstraints = false
         gameView.backgroundColor = #colorLiteral(red: 0.6666666667, green: 0.8274509804, blue: 0.7019607843, alpha: 1)
+        gameView.delegate = self
         view.addSubview(gameView)
         gameView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         gameView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true

@@ -8,10 +8,12 @@
 
 import Foundation
 
+// MARK: - Direction
 enum Direction {
     case left, right, up, down
 }
 
+// MARK: - Point
 struct Point: Equatable {
     var x: Int
     var y: Int
@@ -26,7 +28,7 @@ struct Point: Equatable {
 }
 
 // MARK: - GameLogicDelegate
-protocol GameLogicDelegate: class {
+protocol GameLogicDelegate: AnyObject {
     func didFail()
     func update(score: Int)
 }

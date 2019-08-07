@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ViewController()
-//        let navi = UINavigationController(rootViewController: musicVC)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
