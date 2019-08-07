@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         displayLink.preferredFramesPerSecond = 10
         return displayLink
     }()
-    private var gameLogic: GameLogic?
+    private var game: Game?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 // MARK: - Game
 extension ViewController {
     @objc private func gameLoop() {
-        gameLogic?.move()
+        game?.move()
         gameView.setNeedsDisplay()
     }
 }
@@ -49,8 +49,8 @@ extension ViewController {
     @objc private func startGame() {
         let gameSize: (width: Int, height: Int) = (Int(gameView.bounds.width) / gameView.unitSize,
                                                    Int(gameView.bounds.height) / gameView.unitSize)
-        gameLogic = GameLogic(width: gameSize.width, height: gameSize.height)
-        gameLogic?.delegate = self
+        game = Game(width: gameSize.width, height: gameSize.height)
+        game?.delegate = self
         displayLink.isPaused = false
         startButton.isHidden = true
         scoreLabel.text = "\(0)"
@@ -63,13 +63,13 @@ extension ViewController {
              UISwipeGestureRecognizer.Direction.up.rawValue: .up,
              UISwipeGestureRecognizer.Direction.down.rawValue: .down]
         if let direction = directions[recognizer.direction.rawValue] {
-            gameLogic?.setDirection(direction)
+            game?.setDirection(direction)
         }
     }
 }
 
-// MARK: - GameLogicDelegate
-extension ViewController: GameLogicDelegate {
+// MARK: - GameDelegate
+extension ViewController: GameDelegate {
     func didFail() {
         displayLink.isPaused = true
         startButton.setTitle("Try Again?", for: .normal)
@@ -84,7 +84,7 @@ extension ViewController: GameLogicDelegate {
 // MARK: - GameViewDelegate
 extension ViewController: GameViewDelegate {
     func getPoints() -> (body: [Point], food: Point?) {
-        return (gameLogic?.snake.body ?? [], gameLogic?.food)
+        return (game?.snake.body ?? [], game?.food)
     }
 }
 

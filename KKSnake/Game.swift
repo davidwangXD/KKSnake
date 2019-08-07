@@ -1,5 +1,5 @@
 //
-//  GameLogic.swift
+//  Game.swift
 //  KKSnake
 //
 //  Created by David Wang on 2019/8/7.
@@ -27,14 +27,14 @@ struct Point: Equatable {
     }
 }
 
-// MARK: - GameLogicDelegate
-protocol GameLogicDelegate: AnyObject {
+// MARK: - GameDelegate
+protocol GameDelegate: AnyObject {
     func didFail()
     func update(score: Int)
 }
 
-// MARK: - GameLogic
-class GameLogic {
+// MARK: - Game
+class Game {
     let width: Int
     let height: Int
     private(set) lazy var snake = Snake(body: [Point(x: self.width / 2, y: self.height / 2),
@@ -43,7 +43,7 @@ class GameLogic {
     private(set) lazy var food = createFood()
     private(set) var score = 0
     let scoreIncrement = 10
-    weak var delegate: GameLogicDelegate?
+    weak var delegate: GameDelegate?
     
     init(width: Int, height: Int) {
         self.width = width
@@ -52,7 +52,7 @@ class GameLogic {
 }
 
 // MARK: - Public methods
-extension GameLogic {
+extension Game {
     func setDirection(_ direction: Direction) {
         switch direction {
         case .left, .right:
@@ -89,24 +89,17 @@ extension GameLogic {
 }
 
 // MARK: - Private methods
-extension GameLogic {
+extension Game {
     private func createFood() -> Point {
         while true {
-            let food = Point(x: Int.random(in: 0..<width), y: Int.random(in: 0..<height))
+            let food = randomPoint()
             if !snake.body.contains(food) {
                 return food
             }
         }
     }
-}
-
-
-class Snake {
-    var direction: Direction
-    var body: [Point]
     
-    init(body: [Point], direction: Direction) {
-        self.body = body
-        self.direction = direction
+    private func randomPoint() -> Point {
+        return Point(x: Int.random(in: 0..<width), y: Int.random(in: 0..<height))
     }
 }

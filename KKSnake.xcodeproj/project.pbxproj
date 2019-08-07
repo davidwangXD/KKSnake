@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2172573222FA26C900E39F67 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172573122FA26C900E39F67 /* GameLogic.swift */; };
+		2172573222FA26C900E39F67 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172573122FA26C900E39F67 /* Game.swift */; };
 		2172573C22FA473300E39F67 /* KKSnakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172573B22FA473300E39F67 /* KKSnakeTests.swift */; };
+		2172576A22FB3E2700E39F67 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172576922FB3E2700E39F67 /* Snake.swift */; };
 		21A8F8AB22FA16D30050CCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8F8AA22FA16D30050CCDF /* AppDelegate.swift */; };
 		21A8F8AF22FA16D30050CCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8F8AE22FA16D30050CCDF /* ViewController.swift */; };
 		21A8F8B422FA16D50050CCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A8F8B322FA16D50050CCDF /* Assets.xcassets */; };
@@ -27,10 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2172573122FA26C900E39F67 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		2172573122FA26C900E39F67 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2172573922FA473300E39F67 /* KKSnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKSnakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2172573B22FA473300E39F67 /* KKSnakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSnakeTests.swift; sourceTree = "<group>"; };
 		2172573D22FA473300E39F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2172576922FB3E2700E39F67 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 		21A8F8A722FA16D30050CCDF /* KKSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A8F8AA22FA16D30050CCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A8F8AE22FA16D30050CCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +93,8 @@
 				21A8F8AA22FA16D30050CCDF /* AppDelegate.swift */,
 				21A8F8AE22FA16D30050CCDF /* ViewController.swift */,
 				21A8F8BE22FA1DDB0050CCDF /* GameView.swift */,
-				2172573122FA26C900E39F67 /* GameLogic.swift */,
+				2172573122FA26C900E39F67 /* Game.swift */,
+				2172576922FB3E2700E39F67 /* Snake.swift */,
 				21A8F8C022FA1DEB0050CCDF /* Resources */,
 				21A8F8C122FA1DF40050CCDF /* Supporting Files */,
 			);
@@ -225,7 +228,8 @@
 			files = (
 				21A8F8AF22FA16D30050CCDF /* ViewController.swift in Sources */,
 				21A8F8BF22FA1DDB0050CCDF /* GameView.swift in Sources */,
-				2172573222FA26C900E39F67 /* GameLogic.swift in Sources */,
+				2172576A22FB3E2700E39F67 /* Snake.swift in Sources */,
+				2172573222FA26C900E39F67 /* Game.swift in Sources */,
 				21A8F8AB22FA16D30050CCDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
